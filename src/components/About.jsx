@@ -23,7 +23,7 @@ const About = () => {
             </p>
 
             <p className="mt-1 text-sm text-white/50">
-              Years of Excellence
+             10 Years of Excellence
             </p>
 
           </div>
