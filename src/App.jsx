@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -9,7 +11,10 @@ import Testimonial from "./components/Testimonial";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
-function App() {
+import Register from "./pages/Register";
+
+
+function Home() {
   return (
     <div className="overflow-hidden bg-[#050505]">
 
@@ -31,5 +36,23 @@ function App() {
     </div>
   );
 }
+
+
+function App() {
+  return (
+    <BrowserRouter>
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/register" element={<Register />} />
+
+      </Routes>
+
+    </BrowserRouter>
+  );
+}
+
 
 export default App;
